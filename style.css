@@ -1,5 +1,6 @@
 body{
     background: #001f53;
+    font-family: 'Montserrat';
 }
 .vl {
   display: block;
@@ -12,7 +13,6 @@ h1{
     white-space: pre;
     text-align: left;
     margin-top: 8%;
-    font-family: Montserrat;
     letter-spacing: 2px;
 }
 span{
@@ -40,6 +40,7 @@ span{
 }
 .single-item{
     width: 6%;
+    white-space: nowrap;
     display: inline-block;
     position: relative;
     height: 100%;
@@ -49,20 +50,67 @@ span{
 }
 .single-item > span{
     display: block;
-    font-weight: bold;
     position: absolute;
     top: 50%;
     margin-top: -20px;
     margin-left: -43px;
     width: 100%;
-    cursor: pointer;
+}
+.single-item::before{
+    content: '';
+    display: block;
+    width: 1px;
+    height: 20px;
+    background: #ddd;
+    margin-right: 40px;
+    margin-top: -5px;
+    margin-left: -15px;
 }
 .single-item > span:before{
     content: '';
     display: block;
     width: 16px;
     height: 16px;
-    background: #ddd;
-    margin: 0 auto 8px auto;
+    background: linear-gradient(#87aedc,#e1cde3);
+    margin: -2px auto 20px auto;
     border-radius: 50%;
+    cursor: pointer;
+}
+.single-item2{
+    width: 6%;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    margin-right: 90px;
+    transition: width .5s;
+    z-index: 1;
+}
+.single-item2 > span{
+    display:block;
+    position:absolute;
+    top: 50%;
+    margin-top: -60px;
+    margin-left: -43px;
+    width: 100%;
+}
+.single-item2::after{
+    content: '';
+    display: block;
+    width: 1px;
+    height: 23px;
+    background: #ddd;
+    margin-right: 40px;
+    margin-top: -40px;
+    margin-left: -15px;
+}
+.single-item2 > span:after{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(#87aedc,#e1cde3);
+    margin: 22px auto 20px auto;
+    border-radius: 50%;
+    cursor:pointer;
 }
